@@ -1,0 +1,2499 @@
+;
+; Android WinUsb driver installation.
+;
+[Version]
+Signature           = "$Windows NT$"
+Class               = AndroidUsbDeviceClass
+ClassGuid           = {3F966BD9-FA04-4ec5-991C-D326973B5128}
+Provider            = %ProviderName%
+DriverVer           = 08/27/2012,7.0.0000.00001
+CatalogFile.NTx86   = androidwinusb86.cat
+CatalogFile.NTamd64 = androidwinusba64.cat
+
+[ClassInstall32]
+Addreg = AndroidWinUsbClassReg
+
+[AndroidWinUsbClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-1
+
+
+[Manufacturer]
+%ProviderName% = Google, NTx86, NTamd64
+
+
+[Google.NTx86]
+
+;Google Nexus One
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_0D02
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_0D02&MI_01
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4E11
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E12&MI_01
+
+;Google Nexus S
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4E21
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E22&MI_01
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4E23
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E24&MI_01
+
+;Google Nexus 7
+%SingleBootLoaderInterface% = USB_Install, USB\VID_18D1&PID_4E40
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4E41
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E42
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E42&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E44&MI_01
+
+;Google Nexus Q
+%SingleBootLoaderInterface% = USB_Install, USB\VID_18D1&PID_2C10
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_2C11
+
+;Google Nexus (generic)
+%SingleBootLoaderInterface% = USB_Install, USB\VID_18D1&PID_4EE0
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4EE1
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE2
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE2&MI_01
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4EE3
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE4&MI_01
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4EE5
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE6&MI_01
+
+
+; SHARP IS01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9337&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9338&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9339&MI_05
+; SHARP JN-DK01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9353&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9352&MI_05
+%SingleBootLoaderInterface% = USB_Install, USB\VID_04DD&PID_9373
+; SHARP SH-10B
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9334&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9333&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9332&MI_05
+; SHARP IS03
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_939C&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_939A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_939B&MI_01
+; SHARP SH-03C
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9393&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9392&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9391&MI_05
+; SHARP 003SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B3&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94B8&MI_02
+; SHARP 005SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93CA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93C9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93C8&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BC&MI_02
+; SHARP DM009SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9405&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9404&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9403&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94C0&MI_02
+; SHARP IS05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9401&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93FF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9400&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94C4&MI_02
+; SHARP SH-12C
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9430&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9433&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9434&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9444&MI_02
+; SHARP IS11SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9409&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_944D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_944E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_944F&MI_02
+; SHARP IS12SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9447&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9450&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9451&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9452&MI_02
+; SHARP INFOBAR A01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_944B&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9454&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9455&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9466&MI_02
+; SHARP 006SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9426&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9428&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_942A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9459&MI_02
+; SHARP 007SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_942B&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_942D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_942F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_945B&MI_02
+; SHARP 009SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_946E&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9472&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9473&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9474&MI_02
+; SHARP SH-13C
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9475&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9478&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9479&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9482&MI_02
+; SHARP DM010SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_949F&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94A3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94A4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94A5&MI_02
+; SHARP 101SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94A6&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94AA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94AB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94AC&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94F8&MI_02
+; SHARP IS13SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94EC&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94EE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94EF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94F0&MI_02
+; SHARP SH-02D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D0&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D7&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_950B&MI_02
+; SHARP DM011SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94FA&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94FF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9500&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9501&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94FE&MI_02
+; SHARP 103SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9502&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9507&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9508&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9509&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9506&MI_02
+; SHARP SH-01D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94C8&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94CB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94CC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94CF&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_950A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95E1&MI_02
+; SHARP 102SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94AD&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94B1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94B2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94B3&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94F9&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DE&MI_02
+; SHARP SH-06D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D8&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94DB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94DC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94DF&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_950C&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95E2&MI_02
+; SHARP DM012SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9519&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_951E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_951F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9520&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_951D&MI_02
+; SHARP INFOBAR C01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_953F&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9542&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9543&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9544&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9541&MI_02
+; SHARP IS14SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9537&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_953A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_953B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_953C&MI_02
+; SHARP 104SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9511&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9516&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9517&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9518&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9515&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_957C&MI_01
+; SHARP SH-04D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_952E&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9531&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9532&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9534&MI_02
+; SHARP SH-07D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_958A&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9591&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9592&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9593&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9594&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_958E&MI_02
+; SHARP 106SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9597&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_959B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_959D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_959E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_959F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A0&MI_02
+; SHARP IS15SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B3&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95BA&MI_02
+; SHARP ISW16SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A9&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95AD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95AE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95AF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B0&MI_02
+; SHARP SH-09D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95C9&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95CD&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95CE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95CF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95D0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95D3&MI_02
+; SHARP 107SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95D4&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DD&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95D8&MI_02
+; SHARP SH-10D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95EE&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F2&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F8&MI_02
+; SHARP IS17SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95FB&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9600&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95FF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95FE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9601&MI_02
+; SHARP SHL21
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9619&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_961C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_961D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_961E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_961F&MI_02
+; SHARP SH-01E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9620&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9624&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9625&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9626&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9627&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_962A&MI_02
+; SHARP SH-02E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_962E&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9633&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9634&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9635&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9638&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9632&MI_02
+; SHARP SHT21
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_964C&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9651&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9650&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_964F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9652&MI_02
+; SHARP 200SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9653&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9658&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_965A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_965B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9659&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_965C&MI_02
+; SHARP DM013SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_966C&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9672&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9673&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9674&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9675&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9671&MI_02
+; SHARP SH-04E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9639&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_963E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_963F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9640&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9643&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_963D&MI_02
+; SHARP SH-05E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9676&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_967B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_967C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_967D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9680&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_967A&MI_02
+; SHARP DM014SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9682&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9686&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9688&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9689&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_968A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_968B&MI_02
+; SHARP 203SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_965F&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9665&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9666&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9667&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9668&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9664&MI_02
+; SHARP 204SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9691&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9699&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9697&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9698&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_969A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9695&MI_02
+; SHARP SH-06E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96C8&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96CD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96CE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96CF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D2&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96CC&MI_02
+; SHARP 205SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B1&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B7&MI_02
+; SHARP SH-07E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D3&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96DA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96DD&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D7&MI_02
+; SHARP 206SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96BB&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96BA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96BD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96BF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96C1&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96C2&MI_02
+; SHARP SHL22
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96FA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96FB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96FC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96FD&MI_02
+; SHARP SH-08E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96E3&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96E8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96E9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96EA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96ED&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96E7&MI_02
+; SHARP WX04SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9710&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9712&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9714&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9716&MI_02
+; SHARP SH-01F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9742&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9743&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9744&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9746&MI_02
+; SHARP SHL23
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9754&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9755&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9756&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9757&MI_02
+; SHARP SBM302SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9730&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9732&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9734&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9736&MI_02
+; SHARP DM016SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9798&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_979A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_979C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_979E&MI_02
+; SHARP SH-02F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_974B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_974C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_974D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_974F&MI_02
+; SHARP SH-03F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9774&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9775&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9776&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9778&MI_02
+; SHARP SH90B
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97AC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97AD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97AE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97B0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97AB&MI_02
+; SHARP SBM303SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9769&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_976B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_976D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_976F&MI_02
+; SHARP SHL24
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_978B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_978C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_978D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_978E&MI_02
+; SHARP SHT22
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9793&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9794&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9795&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9796&MI_02
+; SHARP WX05SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_977B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_977D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_977F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9781&MI_02
+; SHARP SH-04F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97C6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97C7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97C8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97CA&MI_02
+; SHARP 304SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97B9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97BB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97BD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97BF&MI_02
+; SHARP SH-05F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97EF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97F0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97F1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97F3&MI_02
+; SHARP SHL25
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D3&MI_02
+; SHARP SH-06F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97FE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97FF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9800&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9802&MI_02
+; SHARP 305SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97DA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97DC&MI_02
+; SHARP 306SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97DE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97E0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97E2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97E4&MI_02
+; SHARP SH-01G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9848&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9849&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_984A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_984C&MI_02
+; SHARP SH-02G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9851&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9852&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9853&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9855&MI_02
+; SHARP 401SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_981B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_981D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_981F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9821&MI_02
+; SHARP 402SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9823&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9825&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9827&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9829&MI_02
+; SHARP SH-M01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9881&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9882&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9883&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9885&MI_02
+; SHARP SHV31
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9872&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9873&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9874&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9875&MI_02
+; SHARP SHF31
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_987A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_987B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_987C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_987D&MI_02
+; SHARP SH825Wi
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98B0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98B2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98B4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98B6&MI_02
+; SHARP SH-03G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98BD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98BE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98BF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C1&MI_02
+; SHARP SHV32
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98DC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98DD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98DE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98DF&MI_02
+; SHARP SH-04G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98EF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F3&MI_02
+; SHARP SH-06G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C9&MI_02
+; SHARP 404SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98CC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98CE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98D0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98D2&MI_02
+; SHARP SH-05G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98FB&MI_02
+; SHARP SHF32
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9907&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9908&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9909&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_990A&MI_02
+; SHARP 403SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98E2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98E4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98E6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98E8&MI_02
+; SHARP SH-01H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_994D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_994E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_994F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9951&MI_02
+; SHARP SH-M02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9962&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9964&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9963&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9966&MI_02
+; SHARP SH-RM02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_995A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_995C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_995B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_995E&MI_02
+; SHARP 502SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_992E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9930&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9931&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9933&MI_02
+; SHARP 501SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9926&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9928&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_992A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_992C&MI_02
+; SHARP SH-02H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9982&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9984&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9986&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9988&MI_02
+; SHARP 504SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_996A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_996C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_996E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9970&MI_02
+; SHARP SH-M02-EVA20
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9999&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9997&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9998&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9995&MI_02
+; SHARP 503SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9935&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9937&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9939&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_993B&MI_02
+; SHARP SHV33
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_990F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9910&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9911&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9912&MI_02
+; SHARP DM-01H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_998A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_998C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_998E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9990&MI_02
+; SHARP SH-03H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99BA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99BC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99BE&MI_02
+; SHARP 505SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_999E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99A0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99A2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99A4&MI_02
+; SHARP SH-04H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99C4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99C5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99C6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99C8&MI_02
+; SHARP 506SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B6&MI_02
+; SHARP SHV34
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99CF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99CE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99CD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D0&MI_02
+; SHARP SHV35
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D8&MI_02
+; SHARP SHF33
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99DF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99DE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99DD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E0&MI_02
+; SHARP SH-M03
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A0B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A09&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A0A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A07&MI_02
+; Google adb
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4EE7
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE9&MI_02
+; SHARP 507SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99F4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99F6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99F8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99FA&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_2D03&MI_02
+%SingleBootLoaderInterface% = USB_Install, USB\VID_18D1&PID_D00D
+; SHARP SHV36
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E8&MI_02
+; SHARP 509SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99FC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99FE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A00&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A02&MI_02
+; SHARP SH-01J
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A22&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A23&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A24&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A26&MI_02
+; SHARP 601SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A10&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A12&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A14&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A16&MI_02
+; SHARP 602SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A53&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A55&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A57&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A59&MI_02
+; SHARP SH-02J
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A47&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A49&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A4B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A4D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A4F&MI_02
+; SHARP SHV37
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A38&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A37&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A36&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A39&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A3A&MI_02
+; SHARP SHN01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A5E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A60&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A5F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A62&MI_02
+; SHARP SH-M04
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A8C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A8A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A88&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A86&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A84&MI_02
+; SHARP SHV38
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A42&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A41&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A40&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A43&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A44&MI_02
+; SHARP 603SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A64&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A66&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A68&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A6A&MI_02
+; SHARP DM-01J
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A77&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A79&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A7B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A7D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A7F&MI_02
+; SHARP S1
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C030&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C031&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C008&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0E8D&PID_2048&MI_02
+; SHARP SH-L02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA6&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA7&MI_02
+; SHARP SHV37
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A73&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A72&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A71&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A74&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A75&MI_02
+; SHARP X1
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AC2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AC4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AC6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AC8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ACA&MI_02
+; SHARP SH-03J
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AAA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AAC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AAE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB2&MI_02
+; SHARP SHV39
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A99&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A98&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A97&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A9A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A9B&MI_02
+; SHARP 605SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ABA&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ABC&MI_02
+; SHARP 606SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ACC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ACE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AD0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AD2&MI_02
+; SHARP SHV40
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AFB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AFA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AFC&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AFD&MI_02
+; SHARP SH-01K
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9BC3
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B7E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B80&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B82&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B84&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B86&MI_02
+; SHARP SH-02K
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B97&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B96&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B95&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B93&MI_02
+; SHARP SH-M05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B9F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B9D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B9B&MI_02
+; SHARP SHF34
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AEF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF2&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF3&MI_02
+; SHARP SHV41
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE9&MI_02
+; SHARP 701SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B15&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B17&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B19&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B1B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B1D&MI_02
+; SHARP S3-SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB6&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB8&MI_02
+; SHARP SH-M06
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BAD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BAB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA7&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA5&MI_02
+; SHARP 702SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BBA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BBC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BBE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BC0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BC2&MI_02
+; SHARP X4-SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C06&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C08&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C0A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C0C&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C0E&MI_02
+; SHARP SHV42
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B05&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B04&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B03&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B06&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B07&MI_02
+; SHARP SH-03K
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9C00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BF7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BF9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BFB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BFD&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BFF&MI_02
+; SHARP 706SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BE3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BE5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BE7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BE9&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BEB&MI_02
+; SHARP SH-M07
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C18&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C1A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C1C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C1E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C20&MI_02
+; SHARP SHV43
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C57&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C56&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C55&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C58&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C59&MI_02
+; SHARP 801SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C99&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C9B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C9D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C9F&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA1&MI_02
+; SHARP SH-01L
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9C8C
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C83&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C85&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C87&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C89&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C8B&MI_02
+; SHARP S5-SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C8F&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C91&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C93&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C95&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C97&MI_02
+; SHARP SH-M08
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CAA&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA4&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA2&MI_02
+; SHARP 803SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C79&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C7B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C7D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C7F&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C81&MI_02
+; SHARP SH-M09
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CB4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CB2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CB0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CAE&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CAC&MI_02
+; SHARP SH-02L
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9CC2
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CB9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CBB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CBD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CBF&MI_02
+; SHARP SH-M10
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D33&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D31&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D2F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D2D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D2B&MI_02
+; SHARP 805SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CCF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD5&MI_02
+; SHARP 806SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CDB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CDD&MI_02
+; SHARP 808SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CFA&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CFC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CFE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D00&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D02&MI_02
+; SHARP SH-04L
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9D25
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D1C&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D1E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D20&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D22&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D24&MI_02
+; SHARP SHV44
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D0A&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D09&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D08&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D0B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D0C&MI_02
+; SHARP 807SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CDF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CE1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CE3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CE5&MI_02
+; SHARP SH-03L
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9D17
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D0E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D10&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D12&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D14&MI_02
+; SHARP SH-RM12
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D5D&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D5F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D61&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D63&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D65&MI_02
+; SHARP SH-02M
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9D51
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D5A&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D58&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D56&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D54&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D52&MI_02
+; SHARP SHV45
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D78&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D80&MI_02
+; SHARP 907SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D82&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D84&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D86&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D88&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D8A&MI_02
+; SHARP SH-S7
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D76&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D6E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D70&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D72&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D74&MI_02
+; SHARP SH-01M
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9DCC
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D91&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D93&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D95&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D97&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D99&MI_02
+; SHARP 906SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D9B&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D9D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D9F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA1&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA3&MI_02
+; SHARP SHV47
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA5&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DAB&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DAD&MI_02
+; SHARP SH-M13
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DAF&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DB1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DB3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DB5&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DB7&MI_02
+; SHARP SH-51A
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9E02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DF9&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DFB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DFD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DFF&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E01&MI_02
+; SHARP 908SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E04&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E06&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E08&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E0A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E0C&MI_02
+; SHARP SHG01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E12&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E14&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E16&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E18&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E1A&MI_02
+; SHARP d-41A
+%SingleBootLoaderInterface% = USB_Install, USB\VID_0489&PID_C043
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C030&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C031&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C008&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE9&MI_02
+; SHARP 0489 Common
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C001&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C026&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C02A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C040&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C000&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00A&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00C&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00F&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C020&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C02D&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C02E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C02F&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C032&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C035&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C036&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C03A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C03C&MI_03
+; SHARP SHV45
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D78&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D80&MI_02
+; SHARP SHV48
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E3D&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E3F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E41&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E43&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E45&MI_02
+; SHARP SH-41A
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E52&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E54&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E56&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E58&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E5A&MI_02
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9E5B
+; SHARP SH-53A
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E93&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E95&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E97&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E99&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E9B&MI_02
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9E9C
+; SHARP SH-M15
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E71&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E73&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E75&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E77&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E79&MI_02
+; SHARP A003SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E5D&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E5F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E61&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E63&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E65&MI_02
+; SHARP SH-RM15
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E67&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E69&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E6B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E6D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E6F&MI_02
+; SHARP SHG03
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA8&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EAA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EAC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EAE&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB0&MI_02
+; SHARP A004SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E9E&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA4&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA6&MI_02
+; SHARP SH-M17
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB2&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EBA&MI_02
+; SHARP SH-S50
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EBC&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EBE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EC0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EC2&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EC4&MI_02
+; SHARP SH-51B
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ED6&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ED8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EDA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EDC&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EDE&MI_02
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9ED4
+; SHARP A101SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE0&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE6&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE8&MI_02
+; SHARP LP-01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EEA&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EEC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EEE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EF0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EF2&MI_02
+; SHARP A102SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F25&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F27&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F29&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F2B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F2D&MI_02
+; SHARP SH-RM18
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F1B&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F1D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F1F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F21&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F23&MI_02
+; SHARP SH-M19
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F2F&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F31&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F33&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F35&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F37&MI_02
+; SHARP A105SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F3A&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F3C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F3E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F40&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F42&MI_02
+; SHARP SHG04
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F46&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F48&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F4A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F4C&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F4E&MI_02
+; SHARP SH-54B
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F56&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F58&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F5A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F5C&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F5E&MI_02
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9F54
+; SHARP SHG05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F60&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F62&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F64&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F66&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F68&MI_02
+; SHARP SH-Z60
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F6A&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F6C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F6E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F70&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F72&MI_02
+; SHARP SH-RM19
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F75&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F77&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F79&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F7B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F7D&MI_02
+; SHARP SH-M22
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F7F&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F81&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F83&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F85&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F87&MI_02
+
+
+[Google.NTamd64]
+
+;Google Nexus One
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_0D02
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_0D02&MI_01
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4E11
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E12&MI_01
+
+;Google Nexus S
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4E21
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E22&MI_01
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4E23
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E24&MI_01
+
+;Google Nexus 7
+%SingleBootLoaderInterface% = USB_Install, USB\VID_18D1&PID_4E40
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4E41
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E42
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E42&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4E44&MI_01
+
+;Google Nexus Q
+%SingleBootLoaderInterface% = USB_Install, USB\VID_18D1&PID_2C10
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_2C11
+
+;Google Nexus (generic)
+%SingleBootLoaderInterface% = USB_Install, USB\VID_18D1&PID_4EE0
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4EE1
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE2
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE2&MI_01
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4EE3
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE4&MI_01
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4EE5
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE6&MI_01
+
+; SHARP IS01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9337&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9338&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9339&MI_05
+; SHARP JN-DK01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9353&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9352&MI_05
+%SingleBootLoaderInterface% = USB_Install, USB\VID_04DD&PID_9373
+; SHARP SH-10B
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9334&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9333&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9332&MI_05
+; SHARP IS03
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_939C&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_939A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_939B&MI_01
+; SHARP SH-03C
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9393&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9392&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9391&MI_05
+; SHARP 003SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B3&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93B7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94B8&MI_02
+; SHARP 005SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93CA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93C9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93C8&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BC&MI_02
+; SHARP DM009SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9405&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9404&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9403&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94BF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94C0&MI_02
+; SHARP IS05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9401&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_93FF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9400&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94C4&MI_02
+; SHARP SH-12C
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9430&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9433&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9434&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9444&MI_02
+; SHARP IS11SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9409&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_944D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_944E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_944F&MI_02
+; SHARP IS12SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9447&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9450&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9451&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9452&MI_02
+; SHARP INFOBAR A01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_944B&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9454&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9455&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9466&MI_02
+; SHARP 006SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9426&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9428&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_942A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9459&MI_02
+; SHARP 007SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_942B&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_942D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_942F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_945B&MI_02
+; SHARP 009SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_946E&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9472&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9473&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9474&MI_02
+; SHARP SH-13C
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9475&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9478&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9479&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9482&MI_02
+; SHARP DM010SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_949F&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94A3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94A4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94A5&MI_02
+; SHARP 101SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94A6&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94AA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94AB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94AC&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94F8&MI_02
+; SHARP IS13SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94EC&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94EE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94EF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94F0&MI_02
+; SHARP SH-02D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D0&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D7&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_950B&MI_02
+; SHARP DM011SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94FA&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94FF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9500&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9501&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94FE&MI_02
+; SHARP 103SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9502&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9507&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9508&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9509&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9506&MI_02
+; SHARP SH-01D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94C8&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94CB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94CC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94CF&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_950A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95E1&MI_02
+; SHARP 102SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94AD&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94B1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94B2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94B3&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94F9&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DE&MI_02
+; SHARP SH-06D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94D8&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94DB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94DC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_94DF&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_950C&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95E2&MI_02
+; SHARP DM012SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9519&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_951E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_951F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9520&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_951D&MI_02
+; SHARP INFOBAR C01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_953F&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9542&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9543&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9544&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9541&MI_02
+; SHARP IS14SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9537&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_953A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_953B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_953C&MI_02
+; SHARP 104SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9511&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9516&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9517&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9518&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9515&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_957C&MI_01
+; SHARP SH-04D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_952E&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9531&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9532&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9534&MI_02
+; SHARP SH-07D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_958A&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9591&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9592&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9593&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9594&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_958E&MI_02
+; SHARP 106SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9597&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_959B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_959D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_959E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_959F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A0&MI_02
+; SHARP IS15SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B3&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95BA&MI_02
+; SHARP ISW16SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95A9&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95AD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95AE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95AF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95B0&MI_02
+; SHARP SH-09D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95C9&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95CD&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95CE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95CF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95D0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95D3&MI_02
+; SHARP 107SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95D4&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95DD&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95D8&MI_02
+; SHARP SH-10D
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95EE&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F2&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95F8&MI_02
+; SHARP IS17SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95FB&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9600&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95FF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_95FE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9601&MI_02
+; SHARP SHL21
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9619&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_961C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_961D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_961E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_961F&MI_02
+; SHARP SH-01E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9620&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9624&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9625&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9626&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9627&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_962A&MI_02
+; SHARP SH-02E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_962E&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9633&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9634&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9635&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9638&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9632&MI_02
+; SHARP SHT21
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_964C&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9651&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9650&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_964F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9652&MI_02
+; SHARP 200SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9653&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9658&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_965A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_965B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9659&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_965C&MI_02
+; SHARP DM013SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_966C&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9672&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9673&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9674&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9675&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9671&MI_02
+; SHARP SH-04E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9639&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_963E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_963F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9640&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9643&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_963D&MI_02
+; SHARP SH-05E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9676&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_967B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_967C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_967D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9680&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_967A&MI_02
+; SHARP DM014SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9682&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9686&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9688&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9689&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_968A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_968B&MI_02
+; SHARP 203SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_965F&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9665&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9666&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9667&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9668&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9664&MI_02
+; SHARP 204SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9691&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9699&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9697&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9698&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_969A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9695&MI_02
+; SHARP SH-06E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96C8&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96CD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96CE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96CF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D2&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96CC&MI_02
+; SHARP 205SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B1&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96B7&MI_02
+; SHARP SH-07E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D3&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96DA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96DD&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96D7&MI_02
+; SHARP 206SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96BB&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96BA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96BD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96BF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96C1&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96C2&MI_02
+; SHARP SHL22
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96FA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96FB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96FC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96FD&MI_02
+; SHARP SH-08E
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96E3&MI_05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96E8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96E9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96EA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96ED&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_96E7&MI_02
+; SHARP WX04SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9710&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9712&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9714&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9716&MI_02
+; SHARP SH-01F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9742&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9743&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9744&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9746&MI_02
+; SHARP SHL23
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9754&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9755&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9756&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9757&MI_02
+; SHARP SBM302SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9730&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9732&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9734&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9736&MI_02
+; SHARP DM016SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9798&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_979A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_979C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_979E&MI_02
+; SHARP SH-02F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_974B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_974C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_974D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_974F&MI_02
+; SHARP SH-03F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9774&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9775&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9776&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9778&MI_02
+; SHARP SH90B
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97AC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97AD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97AE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97B0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97AB&MI_02
+; SHARP SBM303SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9769&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_976B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_976D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_976F&MI_02
+; SHARP SHL24
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_978B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_978C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_978D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_978E&MI_02
+; SHARP SHT22
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9793&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9794&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9795&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9796&MI_02
+; SHARP WX05SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_977B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_977D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_977F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9781&MI_02
+; SHARP SH-04F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97C6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97C7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97C8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97CA&MI_02
+; SHARP 304SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97B9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97BB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97BD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97BF&MI_02
+; SHARP SH-05F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97EF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97F0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97F1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97F3&MI_02
+; SHARP SHL25
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D3&MI_02
+; SHARP SH-06F
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97FE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97FF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9800&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9802&MI_02
+; SHARP 305SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97D8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97DA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97DC&MI_02
+; SHARP 306SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97DE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97E0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97E2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_97E4&MI_02
+; SHARP SH-01G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9848&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9849&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_984A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_984C&MI_02
+; SHARP SH-02G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9851&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9852&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9853&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9855&MI_02
+; SHARP 401SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_981B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_981D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_981F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9821&MI_02
+; SHARP 402SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9823&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9825&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9827&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9829&MI_02
+; SHARP SH-M01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9881&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9882&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9883&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9885&MI_02
+; SHARP SHV31
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9872&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9873&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9874&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9875&MI_02
+; SHARP SHF31
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_987A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_987B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_987C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_987D&MI_02
+; SHARP SH825Wi
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98B0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98B2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98B4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98B6&MI_02
+; SHARP SH-03G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98BD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98BE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98BF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C1&MI_02
+; SHARP SHV32
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98DC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98DD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98DE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98DF&MI_02
+; SHARP SH-04G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98EF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F3&MI_02
+; SHARP SH-06G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98C9&MI_02
+; SHARP 404SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98CC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98CE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98D0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98D2&MI_02
+; SHARP SH-05G
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98F9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98FB&MI_02
+; SHARP SHF32
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9907&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9908&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9909&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_990A&MI_02
+; SHARP 403SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98E2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98E4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98E6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_98E8&MI_02
+; SHARP SH-01H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_994D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_994E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_994F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9951&MI_02
+; SHARP SH-M02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9962&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9964&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9963&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9966&MI_02
+; SHARP SH-RM02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_995A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_995C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_995B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_995E&MI_02
+; SHARP 502SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_992E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9930&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9931&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9933&MI_02
+; SHARP 501SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9926&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9928&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_992A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_992C&MI_02
+; SHARP SH-02H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9982&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9984&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9986&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9988&MI_02
+; SHARP 504SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_996A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_996C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_996E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9970&MI_02
+; SHARP SH-M02-EVA20
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9999&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9997&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9998&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9995&MI_02
+; SHARP 503SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9935&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9937&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9939&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_993B&MI_02
+; SHARP SHV33
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_990F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9910&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9911&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9912&MI_02
+; SHARP DM-01H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_998A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_998C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_998E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9990&MI_02
+; SHARP SH-03H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99BA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99BC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99BE&MI_02
+; SHARP 505SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_999E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99A0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99A2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99A4&MI_02
+; SHARP SH-04H
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99C4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99C5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99C6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99C8&MI_02
+; SHARP 506SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99B6&MI_02
+; SHARP SHV34
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99CF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99CE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99CD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D0&MI_02
+; SHARP SHV35
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99D8&MI_02
+; SHARP SHF33
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99DF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99DE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99DD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E0&MI_02
+; SHARP SH-M03
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A0B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A09&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A0A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A07&MI_02
+; Google adb
+%SingleAdbInterface%        = USB_Install, USB\VID_18D1&PID_4EE7
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE9&MI_02
+; SHARP 507SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99F4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99F6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99F8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99FA&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_2D03&MI_02
+%SingleBootLoaderInterface% = USB_Install, USB\VID_18D1&PID_D00D
+; SHARP SHV36
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99E8&MI_02
+; SHARP 509SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99FC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_99FE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A00&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A02&MI_02
+; SHARP SH-01J
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A22&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A23&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A24&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A26&MI_02
+; SHARP 601SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A10&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A12&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A14&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A16&MI_02
+; SHARP 602SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A53&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A55&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A57&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A59&MI_02
+; SHARP SH-02J
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A47&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A49&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A4B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A4D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A4F&MI_02
+; SHARP SHV37
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A38&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A37&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A36&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A39&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A3A&MI_02
+; SHARP SHN01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A5E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A60&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A5F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A62&MI_02
+; SHARP SH-M04
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A8C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A8A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A88&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A86&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A84&MI_02
+; SHARP SHV38
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A42&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A41&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A40&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A43&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A44&MI_02
+; SHARP 603SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A64&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A66&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A68&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A6A&MI_02
+; SHARP DM-01J
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A77&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A79&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A7B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A7D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A7F&MI_02
+; SHARP S1
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C030&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C031&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C008&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0E8D&PID_2048&MI_02
+; SHARP SH-L02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA6&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AA7&MI_02
+; SHARP SHV37
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A73&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A72&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A71&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A74&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A75&MI_02
+; SHARP X1
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AC2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AC4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AC6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AC8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ACA&MI_02
+; SHARP SH-03J
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AAA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AAC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AAE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB2&MI_02
+; SHARP SHV39
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A99&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A98&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A97&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A9A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9A9B&MI_02
+; SHARP 605SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AB8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ABA&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ABC&MI_02
+; SHARP 606SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ACC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ACE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AD0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AD2&MI_02
+; SHARP SHV40
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AFB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AFA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AFC&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AFD&MI_02
+; SHARP SH-01K
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9BC3
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B7E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B80&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B82&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B84&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B86&MI_02
+; SHARP SH-02K
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B97&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B96&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B95&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B93&MI_02
+; SHARP SH-M05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B9F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B9D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B9B&MI_02
+; SHARP SHF34
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AEF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF2&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AF3&MI_02
+; SHARP SHV41
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9AE9&MI_02
+; SHARP 701SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B15&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B17&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B19&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B1B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B1D&MI_02
+; SHARP S3-SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB6&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BB8&MI_02
+; SHARP SH-M06
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BAD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BAB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA7&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BA5&MI_02
+; SHARP 702SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BBA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BBC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BBE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BC0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BC2&MI_02
+; SHARP X4-SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C06&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C08&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C0A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C0C&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C0E&MI_02
+; SHARP SHV42
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B05&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B04&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B03&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B06&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9B07&MI_02
+; SHARP SH-03K
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9C00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BF7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BF9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BFB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BFD&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BFF&MI_02
+; SHARP 706SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BE3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BE5&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BE7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BE9&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9BEB&MI_02
+; SHARP SH-M07
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C18&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C1A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C1C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C1E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C20&MI_02
+; SHARP SHV43
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C57&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C56&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C55&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C58&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C59&MI_02
+; SHARP 801SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C99&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C9B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C9D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C9F&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA1&MI_02
+; SHARP SH-01L
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9C8C
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C83&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C85&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C87&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C89&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C8B&MI_02
+; SHARP S5-SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C8F&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C91&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C93&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C95&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C97&MI_02
+; SHARP SH-M08
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CAA&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA4&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CA2&MI_02
+; SHARP 803SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C79&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C7B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C7D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C7F&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9C81&MI_02
+; SHARP SH-M09
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CB4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CB2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CB0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CAE&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CAC&MI_02
+; SHARP SH-02L
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9CC2
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CB9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CBB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CBD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CBF&MI_02
+; SHARP SH-M10
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D33&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D31&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D2F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D2D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D2B&MI_02
+; SHARP 805SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CCF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD5&MI_02
+; SHARP 806SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CD8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CDB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CDD&MI_02
+; SHARP 808SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CFA&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CFC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CFE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D00&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D02&MI_02
+; SHARP SH-04L
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9D25
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D1C&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D1E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D20&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D22&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D24&MI_02
+; SHARP SHV44
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D0A&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D09&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D08&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D0B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D0C&MI_02
+; SHARP 807SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CDF&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CE1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CE3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9CE5&MI_02
+; SHARP SH-03L
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9D17
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D0E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D10&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D12&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D14&MI_02
+; SHARP SH-RM12
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D5D&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D5F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D61&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D63&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D65&MI_02
+; SHARP SH-02M
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9D51
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D5A&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D58&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D56&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D54&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D52&MI_02
+; SHARP SHV45
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D78&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D80&MI_02
+; SHARP 907SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D82&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D84&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D86&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D88&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D8A&MI_02
+; SHARP SH-S7
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D76&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D6E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D70&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D72&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D74&MI_02
+; SHARP SH-01M
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9DCC
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D91&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D93&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D95&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D97&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D99&MI_02
+; SHARP 906SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D9B&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D9D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D9F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA1&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA3&MI_02
+; SHARP SHV47
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA5&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA7&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DA9&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DAB&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DAD&MI_02
+; SHARP SH-M13
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DAF&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DB1&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DB3&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DB5&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DB7&MI_02
+; SHARP SH-51A
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9E02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DF9&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DFB&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DFD&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9DFF&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E01&MI_02
+; SHARP 908SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E04&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E06&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E08&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E0A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E0C&MI_02
+; SHARP SHG01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E12&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E14&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E16&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E18&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E1A&MI_02
+; SHARP d-41A
+%SingleBootLoaderInterface% = USB_Install, USB\VID_0489&PID_C043
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C030&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C031&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C008&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_18D1&PID_4EE9&MI_02
+; SHARP 0489 Common
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C001&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C026&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C02A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C040&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C000&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00A&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00C&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C00F&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C020&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C02D&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C02E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C02F&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C032&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C035&MI_03
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C036&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C03A&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_0489&PID_C03C&MI_03
+; SHARP SHV45
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D78&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D7E&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9D80&MI_02
+; SHARP SHV48
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E3D&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E3F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E41&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E43&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E45&MI_02
+; SHARP SH-41A
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E52&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E54&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E56&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E58&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E5A&MI_02
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9E5B
+; SHARP SH-53A
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E93&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E95&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E97&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E99&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E9B&MI_02
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9E9C
+; SHARP SH-M15
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E71&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E73&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E75&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E77&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E79&MI_02
+; SHARP A003SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E5D&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E5F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E61&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E63&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E65&MI_02
+; SHARP SH-RM15
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E67&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E69&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E6B&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E6D&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E6F&MI_02
+; SHARP SHG03
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA8&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EAA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EAC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EAE&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB0&MI_02
+; SHARP A004SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9E9E&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA4&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EA6&MI_02
+; SHARP SH-M17
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB2&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB6&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EB8&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EBA&MI_02
+; SHARP SH-S50
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EBC&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EBE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EC0&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EC2&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EC4&MI_02
+; SHARP SH-51B
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ED6&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9ED8&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EDA&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EDC&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EDE&MI_02
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9ED4
+; SHARP A101SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE0&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE2&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE4&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE6&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EE8&MI_02
+; SHARP LP-01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EEA&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EEC&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EEE&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EF0&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9EF2&MI_02
+; SHARP A102SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F25&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F27&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F29&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F2B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F2D&MI_02
+; SHARP SH-RM18
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F1B&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F1D&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F1F&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F21&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F23&MI_02
+; SHARP SH-M19
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F2F&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F31&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F33&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F35&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F37&MI_02
+; SHARP A105SH
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F3A&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F3C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F3E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F40&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F42&MI_02
+; SHARP SHG04
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F46&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F48&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F4A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F4C&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F4E&MI_02
+; SHARP SH-54B
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F56&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F58&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F5A&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F5C&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F5E&MI_02
+%SingleAdbInterface%        = USB_Install, USB\VID_04DD&PID_9F54
+; SHARP SHG05
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F60&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F62&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F64&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F66&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F68&MI_02
+; SHARP SH-Z60
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F6A&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F6C&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F6E&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F70&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F72&MI_02
+; SHARP SH-RM19
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F75&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F77&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F79&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F7B&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F7D&MI_02
+; SHARP SH-M22
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F7F&MI_00
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F81&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F83&MI_01
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F85&MI_02
+%CompositeAdbInterface%     = USB_Install, USB\VID_04DD&PID_9F87&MI_02
+
+
+
+[USB_Install]
+Include = winusb.inf
+Needs   = WINUSB.NT
+
+[USB_Install.Services]
+Include     = winusb.inf
+AddService  = WinUSB,0x00000002,WinUSB_ServiceInstall
+
+[WinUSB_ServiceInstall]
+DisplayName     = %WinUSB_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WinUSB.sys
+
+[USB_Install.Wdf]
+KmdfService = WINUSB, WinUSB_Install
+
+[WinUSB_Install]
+KmdfLibraryVersion  = 1.9
+
+[USB_Install.HW]
+AddReg  = Dev_AddReg
+
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{F72FE0D4-CBCB-407d-8814-9ED673D0DD6B}"
+
+[USB_Install.CoInstallers]
+AddReg    = CoInstallers_AddReg
+CopyFiles = CoInstallers_CopyFiles
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller","WinUSBCoInstaller2.dll"
+
+[CoInstallers_CopyFiles]
+WinUSBCoInstaller2.dll
+WdfCoInstaller01009.dll
+
+[DestinationDirs]
+CoInstallers_CopyFiles=11
+
+[SourceDisksNames]
+1 = %DISK_NAME%,,,\i386
+2 = %DISK_NAME%,,,\amd64
+
+[SourceDisksFiles.x86]
+WinUSBCoInstaller2.dll  = 1
+WdfCoInstaller01009.dll = 1
+
+[SourceDisksFiles.amd64]
+WinUSBCoInstaller2.dll  = 2
+WdfCoInstaller01009.dll = 2
+
+[Strings]
+ProviderName                = "Google, Inc."
+SingleAdbInterface          = "Android ADB Interface"
+CompositeAdbInterface       = "Android Composite ADB Interface"
+SingleBootLoaderInterface   = "Android Bootloader Interface"
+WinUSB_SvcDesc              = "Android USB Driver"
+DISK_NAME                   = "Android WinUsb installation disk"
+ClassName                   = "Android Device"
